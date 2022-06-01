@@ -24,19 +24,19 @@ void main() {
 		system("cls");
 		printf("-----------Flexible Job Shop Problem (FJSSP)-----------\n\n");
 		printf("Menu:\n");
-		printf("1 - leitura de ficheiro de texto com representação de um job \n");
-		printf("2 - Gravação de ficheiro de texto com representação de um job \n");
-		printf("3 - Inserção e alteração de uma operação num job-> "); textcolor(YELLOW); printf("(SubMenu)\n"); textcolor(WHITE);
+		printf("1 - leitura de ficheiro de texto com representação de um Process plan \n");
+		printf("2 - Gravação de ficheiro de texto com representação de um Process plan \n");
+		printf("3 - Inserção e alteração de operações em todo o Process plan -> "); textcolor(YELLOW); printf("(SubMenu)\n"); textcolor(WHITE);
 		printf("4 - Calculo do tempo minimo e listagem de um job\n");
 		printf("5 - Calculo do tempo Maximo e listagem de um job\n");
 		printf("6 - Inserção de um novo job\n");
 		printf("7 - Remoção de um job\n");
 		printf("8 - Escalonamento\n");
 		printf("9 - Listagem de todos os jobs\n");
-		printf("10 - sair\n");
+		printf("10 - Sair\n");
 		scanf("%d", &opcao);
 		switch (opcao) {
-		case 1://!leitura de ficheiro de texto com representação de um job
+		case 1://!leitura de ficheiro de texto com representação de um Process plan
 			system("cls");
 			while (getchar() != '\n') {}
 			if (processos != NULL) {
@@ -70,7 +70,7 @@ void main() {
 				printf("\n\n               Tecla enter para continua");
 			}
 			break;
-		case 2://!Gravação de ficheiro de texto com representação de um job
+		case 2://!Gravação de ficheiro de texto com representação de um Process plan
 			system("cls");
 
 			//!printf("Nome do ficheiro a gravar: %s \n", ficheiroGrava);
@@ -86,7 +86,7 @@ void main() {
 				printf("Introduza o nome do ficheiro: ");
 				scanf("%s", &ficheiroGrava);
 			}
-			escrever(processos, ficheiroGrava);/*Escreve num ficheiro o job guardado na memória*/
+			escrever(processos, ficheiroGrava);/*Escreve num ficheiro do Process plan guardado na memória*/
 			break;
 		case 3://!Inserção de uma nova operação
 			system("cls");
